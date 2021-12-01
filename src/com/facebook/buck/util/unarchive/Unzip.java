@@ -317,7 +317,7 @@ public class Unzip extends Unarchiver {
    * @throws IOException If there is an error reading the archive
    */
   public static ImmutableSet<Path> getZipMembers(Path archiveAbsolutePath) throws IOException {
-    try (FileSystem zipFs = FileSystems.newFileSystem(archiveAbsolutePath, null)) {
+    try (FileSystem zipFs = FileSystems.newFileSystem(archiveAbsolutePath, (ClassLoader)null)) {
       Path root = Iterables.getOnlyElement(zipFs.getRootDirectories());
       return Files.walk(root)
           .filter(path -> !Files.isDirectory(path))

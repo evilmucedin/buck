@@ -68,7 +68,7 @@ class JarReader implements LibraryReader {
     // so let's make sure we crash and detect it if it happens again.
     Preconditions.checkState(!closed);
     if (inner == null) {
-      fileSystem = FileSystems.newFileSystem(jarPath, null);
+      fileSystem = FileSystems.newFileSystem(jarPath, (ClassLoader)null);
       inner = new DirectoryReader(Iterables.getOnlyElement(fileSystem.getRootDirectories()));
     }
 
