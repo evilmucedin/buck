@@ -49,6 +49,7 @@ public class SourceVersionUtils {
         return Opcodes.V10;
       case RELEASE_11:
         return Opcodes.V11;
+      //$CASES-OMITTED$
       default:
         throw new IllegalArgumentException(String.format("Unexpected source version: %s", version));
     }
@@ -79,6 +80,7 @@ public class SourceVersionUtils {
         return SourceVersion.RELEASE_10;
       case "11":
         return SourceVersion.RELEASE_11;
+      //$CASES-OMITTED$
       default:
         throw new HumanReadableException("target %s not supported", target);
     }

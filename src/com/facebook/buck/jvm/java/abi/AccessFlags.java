@@ -222,6 +222,7 @@ public final class AccessFlags {
         return Opcodes.ACC_NATIVE;
       case STRICTFP:
         return Opcodes.ACC_STRICT;
+       //$CASES-OMITTED$
       default:
         throw new IllegalArgumentException(String.format("Unexpected modifier: %s", modifier));
     }
