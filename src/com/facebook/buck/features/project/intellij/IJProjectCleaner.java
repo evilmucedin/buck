@@ -149,6 +149,7 @@ public class IJProjectCleaner {
       } catch (InterruptedException e) {
         Logger.get(IJProjectCleaner.class).warn("Timeout during executor shutdown.", e);
       }
+      cleanExecutor.close();
     }
   }
 
